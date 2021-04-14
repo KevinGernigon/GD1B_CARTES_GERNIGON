@@ -1,3 +1,6 @@
+#ifndef MONSTRE_CPP
+#define MONSTRE_CPP
+
 #include <string>
 #include <iostream>
 #include "Monstre.h"
@@ -55,6 +58,13 @@ private:
         } 
     }
 
+    bool Monstre::getStatus(){
+        if (_isAlive == false){
+            return true;
+        }
+        return false;
+    }
+
     void Monstre::death(){
         if (_scorePv <= 0){
             std::cout << "Le monstre " + _name + " a péri au combat." << std::endl;
@@ -84,3 +94,5 @@ private:
             std::cout << "Il ne peut pas actuellement jouer." << std::endl;
         }
     }
+
+#endif

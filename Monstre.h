@@ -1,3 +1,6 @@
+#ifndef MONSTRE_H
+#define MONSTRE_H
+
 #include <string>
 
 class Monstre{
@@ -14,6 +17,7 @@ class Monstre{
         int getAtk();
         int getPv();
         bool getUse();
+        bool getStatus();
         void attaque(Monstre monstre_defenseur);
         void death();
         void affiche();
@@ -21,3 +25,5 @@ class Monstre{
         Monstre();
         Monstre(std::string name, int scoreAtk, int scorePv);
 };
+
+#endif
